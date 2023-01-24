@@ -6,15 +6,22 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Q037",
+            "request": "launch",
+            "mainClass": "level1.Q037",
+            "projectName": "programmers"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
         {
             "type": "java",
-            "name": "Launch Q031",
+            "name": "Launch Q037",
             "request": "launch",
-            "mainClass": "level1.Q031",
+            "mainClass": "level1.Q037",
             "projectName": "programmers"
         }
     ]
