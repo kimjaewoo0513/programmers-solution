@@ -1,6 +1,7 @@
 package level1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,19 +10,21 @@ import java.util.Map;
 public class Q039 {
     public static void main(String[] args) {
         Solution s = new Solution();
-        String [] strings = {"sun", "bed", "car"};
-        int n = 1;
+        String [] strings = {"abce", "abcd", "cdx"};
+        int n = 2;
         s.solution(strings, n);
+        
     }
 }
 
 //문자열 내 마음대로 정렬하기
 class Solution {
     public String[] solution(String[] strings, int n) {
+        Arrays.sort(strings);
         int stringLength = strings.length;
         String[] answer = new String[stringLength];
-        LinkedHashMap<Integer, Character> lhm = new LinkedHashMap<>();
 
+        LinkedHashMap<Integer, Character> lhm = new LinkedHashMap<>();
         for (int i = 0; i < strings.length; i++) {
             char s = strings[i].charAt(n);
             lhm.put(i, s);
@@ -37,10 +40,9 @@ class Solution {
 
         for (int i = 0; i < strings.length; i++) {
             answer[i] = strings[list.get(i)];
+            System.out.println(answer[i]);
         }
 
-        ///*********** Test Case 1번만 성공, Test Case 2번의 예외처리 시작해야함
-        
         return answer;
     }
 }
